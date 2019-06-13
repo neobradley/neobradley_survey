@@ -9,3 +9,5 @@ services:
       - '59527:50000'
     volumes:
       - ./data/jenkins_home:/data/jenkins_home
+# Update jenkins after running
+# https://medium.com/@jimkang/how-to-start-a-new-jenkins-container-and-update-jenkins-with-docker-cf628aa495e9
