@@ -1,11 +1,11 @@
 version: '3'
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    image: jenkins/jenkins:2.176.1
     container_name: jenkins
     restart: always
     ports:
       - '9080:8080'
       - '59527:50000'
     volumes:
-      - ./var/jenkins_home:/var/jenkins_home
+      - ./data/jenkins_home:/data/jenkins_home
