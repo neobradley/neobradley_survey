@@ -1,18 +1,18 @@
 version: '2'
 
 services:
-  vip-client-backend-sit:
+  app-sit:
     image: openjdk:8-alpine
-    container_name: vip-client-backend-sit
+    container_name: app-sit
     restart: always
     networks:
-      - com-pd-sit
+      - com-net-sit
     ports:
       - 8001:8080
     volumes:
-      - /opt/some_path/vip-backend-service:/opt/server:ro
-    entrypoint: ./opt/server/some_bin_path restart
+      - /opt/some_path/app_service:/opt/server:ro
+    entrypoint: ./opt/server/app_service_bin_path restart
 
 networks:
-  com-pd-sit:
+  com-net-sit:
     driver: bridge
