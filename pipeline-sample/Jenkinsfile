@@ -1,0 +1,51 @@
+pipeline {
+  agent any
+  options {
+    timeout(time: 5, unit: 'MINUTES')
+  }
+  stage('Check') {
+    // Clone & update arch-script project
+  }
+  stage('Build') {
+    steps {
+      sh '/var/git/arch-script/shell/build.sh' "master"
+    }
+  }
+  stage('Deploy DB') {
+    steps {
+      catchError {
+        script {
+          sh '/var/git/arch-script/shell/deploy.sh' "db"
+        }
+      }
+    }
+  }
+  stage('Deploy Service') {
+    parallel {
+      stage(':ServiceA') {
+        steps {
+          catchError {
+            sh '/var/git/arch-script/shell/deploy.sh' "service_a"
+          }
+        }
+      }
+      stage(':ServiceB') {
+        when {
+          expression {param.ENV != 'dev'}
+        }
+        steps {
+          catchError {
+            sh '/var/git/arch-script/shell/deploy.sh' "service_b"
+          }
+        }
+      }
+    }
+  }
+  stage('Deploy Web') {
+    steps {
+      catchError {
+        sh '/var/git/arch-script/shell/deploy.sh' "web"
+      }
+    }
+  }
+}
