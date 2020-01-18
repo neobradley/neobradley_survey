@@ -1,0 +1,44 @@
+# docker compose 版本
+version '3'
+
+services:
+  web:
+    image: httpd # use latest by default, choose desired version
+    ports:
+      - "7001:80" # in case docker already used port 80
+    links:
+      - fluentd
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: httpd.access
+        
+  fluentd:
+    build: ./fluentd # After first run, commit to privete registry then use image instead of build
+    volumes:
+      - /fluentd/etc:/fluentd/etc # sometimes need to use absolute path in src, mystery
+    links:
+      - "elasticsearch"
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+  
+  elasticsearch:
+    image: elasticsearch # use latest by default, choose desired version
+    container_name: elasticsearch # force set container name to avoid docker compose generated name from folder name
+    environment:
+      - "discovery.type=single-node"
+    #volumes:
+    #  - /var/log/elasticsearch/data:/usr/share/elasticsearch/data # for persistent location of logs
+    expose:
+      - "9200:9200"
+    ports:
+      - "9200:9200"
+
+  kibana:
+    image: kibana # use latest by default, choose desired version
+    links:
+      - "elasticsearch"
+    ports:
+      - "5601:5601"

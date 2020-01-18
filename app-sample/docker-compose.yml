@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  app-sit:
+    image: openjdk:8-alpine
+    container_name: app-sit
+    restart: always
+    networks:
+      - com-net-sit
+    ports:
+      - 8001:8080
+    volumes:
+      - /opt/some_path/app_service:/opt/server:ro
+    entrypoint: ./opt/server/app_service_bin_path restart
+
+networks:
+  com-net-sit:
+    driver: bridge
