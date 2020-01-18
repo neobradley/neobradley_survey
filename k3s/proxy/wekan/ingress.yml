@@ -3,12 +3,14 @@ kind: Ingress
 metadata:
   name: wekan
   namespace: proxy
+  annotations:
+    kubernetes.io/ingress.class: traefik
 spec:
   rules:
-    - host: wekan.neobradley.me
+    - host: neobradley.me
       http:
         paths:
-          - path: /
+          - path: /wekan
             backend:
               serviceName: wekan
               servicePort: 9001
