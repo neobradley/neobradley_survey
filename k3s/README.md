@@ -3,6 +3,8 @@
 1. Install
 ```
 curl -s https://raw.githubusercontent.com/rancher/k3d/master/install.sh | bash
+* IF NEED TAG
+curl -s https://raw.githubusercontent.com/rancher/k3d/master/install.sh | TAG=v1.3.4 bash
 ```
 2. Run
 ```

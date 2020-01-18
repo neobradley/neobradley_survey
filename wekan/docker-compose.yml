@@ -24,7 +24,7 @@ services:
       - 9001:8080
     environment:
       - MONGO_URL=mongodb://wekandb:27017/wekan
-      - ROOT_URL=http://172.19.198.184:9001  #   <=== using only at same laptop/desktop where Wekan is installed
+      - ROOT_URL=http://neobradley.me:9001  #   <=== using only at same laptop/desktop where Wekan is installed
       - MAIL_URL=smtp://<mail_url>:25/?ignoreTLS=true&tls={rejectUnauthorized:false}
       - MAIL_FROM=Wekan Notifications <noreply.wekan@mydomain.com>
       - WITH_API=true
