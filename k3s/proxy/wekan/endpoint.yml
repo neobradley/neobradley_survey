@@ -8,3 +8,4 @@ subsets:
       - ip: 172.19.195.161
     ports:
       - port: 9001
+        name: "apacke"
