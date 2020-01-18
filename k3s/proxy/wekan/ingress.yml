@@ -4,9 +4,13 @@ metadata:
   name: wekan
   namespace: proxy
 spec:
-  backend:
-    serviceName: wekan
-    servicePort: 9001
+  rules:
+    - host: wekan.neobradley.me
+      http:
+        paths:
+          - backend:
+              serviceName: wekan
+              servicePort: 9001
 #  rules:
 #    - host: wekan.neobradley.me
 #    - http:
