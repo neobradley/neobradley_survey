@@ -3,7 +3,7 @@ services:
   gitea:
     image: gitea/gitea:1.8
     volumes:
-      - ./data:/data
+      - ./data/gitea:/data/gitea
     ports:
       - "9527:3000"
       - "27:22"

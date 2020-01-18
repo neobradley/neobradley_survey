@@ -1,0 +1,10 @@
+#kind: Endpoints
+#apiVersion: v1
+#metadata:
+#  name: wekan
+#  namespace: proxy
+#subsets:
+#  - addresses:
+#      - ip: 127.0.0.1
+#    ports:
+#      - port: 9001

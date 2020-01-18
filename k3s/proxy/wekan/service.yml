@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wekan
+  namepsace: proxy
+spec:
+  type: ExternalName
+  externalName: neobradley.me:9001
+#  ports:
+#    - port: 9001
+#      protocol: TCP
+#      targetPort: 9001

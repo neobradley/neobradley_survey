@@ -1,0 +1,54 @@
+version: '2'
+
+services:
+  wekandb:
+    image: mongo:4.2.2
+    container_name: wekan-db
+    restart: always
+    command: mongod --oplogSize 128
+    networks:
+      - wekan-tier
+    expose:
+      - 27017
+    volumes:
+      - wekan-db:/data/db
+      - wekan-db-dump:/dump
+
+  wekan:
+    image: wekanteam/wekan:v3.69
+    container_name: wekan-app
+    restart: always
+    networks:
+      - wekan-tier
+    ports:
+      - 9001:8080
+    environment:
+      - MONGO_URL=mongodb://wekandb:27017/wekan
+      - ROOT_URL=http://172.19.198.184:9001  #   <=== using only at same laptop/desktop where Wekan is installed
+      - MAIL_URL=smtp://<mail_url>:25/?ignoreTLS=true&tls={rejectUnauthorized:false}
+      - MAIL_FROM=Wekan Notifications <noreply.wekan@mydomain.com>
+      - WITH_API=true
+      - RICHER_CARD_COMMENT_EDITOR=true
+      - CARD_OPENED_WEBHOOK_ENABLED=false
+      - BIGEVENTS_PATTERN=NONE
+      - BROWSER_POLICY_ENABLED=true
+    depends_on:
+      - wekandb
+
+volumes:
+  wekan-db:
+    driver: local
+    driver_opts:
+        type: none
+        o: bind
+        device: /mnt/d/DEV/servers/docker/mongo/data/db
+  wekan-db-dump:
+    driver: local
+    driver_opts:
+        type: none
+        o: bind
+        device: /mnt/d/DEV/servers/docker/mongo/data/dump
+
+networks:
+  wekan-tier:
+    driver: bridge

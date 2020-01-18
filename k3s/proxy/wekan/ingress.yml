@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: wekan
+  namespace: proxy
+spec:
+  rules:
+    - host: wekan.neobradley.me
+    - http:
+        paths:
+          - path: /
+            backend:
+              serviceName: wekan
+              servicePort: 9001
