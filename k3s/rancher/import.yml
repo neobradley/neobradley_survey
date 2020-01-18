@@ -63,12 +63,12 @@ roleRef:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: cattle-credentials-b2ea731
+  name: cattle-credentials-5be8361
   namespace: cattle-system
 type: Opaque
 data:
-  url: "aHR0cHM6Ly8xNzIuMTguMjA3LjE1NTo4NDQz"
-  token: "a2ZmZ2RmNnY3ajd4cjk0Mm56bTV0cXh2ZDZwbWI5eDhmaGo5cTU3dDU0YzZ4YjdqeDltcGM0"
+  url: "aHR0cHM6Ly9uZW9icmFkbGV5Lm1lOjg0NDM="
+  token: "ODg5cjJtYmI4OG16dGZyZHRxZmY4cW5iOWN4ZG5uemNjcXN0ZjhoNTZscjU3d3BqOTVycTY3"
 
 ---
 
@@ -138,7 +138,7 @@ spec:
           imagePullPolicy: IfNotPresent
           env:
             - name: CATTLE_SERVER
-              value: "https://172.18.207.155:8443"
+              value: "https://neobradley.me:8443"
             - name: CATTLE_CA_CHECKSUM
               value: "4effac584214b1f2d7821972f32e010ac134c5635a0f795f4c75e44fd2ab75cc"
             - name: CATTLE_CLUSTER
@@ -153,7 +153,7 @@ spec:
       volumes:
         - name: cattle-credentials
           secret:
-            secretName: cattle-credentials-b2ea731
+            secretName: cattle-credentials-5be8361
             defaultMode: 320
 
 ---
@@ -195,7 +195,7 @@ spec:
                 fieldRef:
                   fieldPath: spec.nodeName
             - name: CATTLE_SERVER
-              value: "https://172.18.207.155:8443"
+              value: "https://neobradley.me:8443"
             - name: CATTLE_CA_CHECKSUM
               value: "4effac584214b1f2d7821972f32e010ac134c5635a0f795f4c75e44fd2ab75cc"
             - name: CATTLE_CLUSTER
@@ -233,7 +233,7 @@ spec:
             type: DirectoryOrCreate
         - name: cattle-credentials
           secret:
-            secretName: cattle-credentials-b2ea731
+            secretName: cattle-credentials-5be8361
             defaultMode: 320
         - hostPath:
             path: /etc/docker/certs.d
