@@ -1,14 +1,14 @@
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
-metadata:
-  name: wekan
-  namespace: proxy
-spec:
-  entryPoints:
-    - web
-  routes:
-    - match: Host(`neobradley.me`) && PathPrefix(`/wekan`)
-      kind: Rule
-      services:
-        - name: wekan
-          port: 9001
+#apiVersion: traefik.containo.us/v1alpha1
+#kind: IngressRoute
+#metadata:
+#  name: wekan
+#  namespace: proxy
+#spec:
+#  entryPoints:
+#    - web
+#  routes:
+#    - match: Host(`neobradley.me`) && PathPrefix(`/wekan`)
+#      kind: Rule
+#      services:
+#        - name: wekan
+#          port: 9001
