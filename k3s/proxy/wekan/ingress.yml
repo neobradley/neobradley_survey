@@ -12,11 +12,3 @@ spec:
             backend:
               serviceName: wekan
               servicePort: 9001
-#  rules:
-#    - host: wekan.neobradley.me
-#    - http:
-#        paths:
-#          - path: /
-#            backend:
-#              serviceName: wekan
-#              servicePort: 9001
