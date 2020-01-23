@@ -1,11 +1,11 @@
-kind: Endpoints
 apiVersion: v1
+kind: Endpoints
 metadata:
   name: wekan
   namespace: proxy
 subsets:
   - addresses:
-      - ip: 172.19.195.161
+      - ip: 172.18.192.203
     ports:
       - port: 9001
-        name: "apache"
+        protocol: TCP

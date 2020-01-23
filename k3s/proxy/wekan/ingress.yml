@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: wekan
@@ -7,10 +7,10 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-    - host: neobradley.me
+    - host: wekan.neobradley.me
       http:
         paths:
-          - path: /wekan
+          - path: /
             backend:
               serviceName: wekan
-              servicePort: 9001
+              servicePort: 80

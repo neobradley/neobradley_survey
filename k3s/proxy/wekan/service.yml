@@ -9,7 +9,6 @@ spec:
 #  prots:
 #    - port: 9001
   ports:
-    - protocol: TCP
-      port: 9001
+    - port: 80
       targetPort: 9001
-      name: "apache"
+      protocol: TCP
