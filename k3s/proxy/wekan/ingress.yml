@@ -4,7 +4,7 @@ metadata:
   name: wekan
   namespace: proxy
   annotations:
-    kubernetes.io/ingress.class: traefik
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
     - host: wekan.neobradley.me
