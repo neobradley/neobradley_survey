@@ -3,7 +3,7 @@ version: "2"
 services:
   nexus:
     container_name: nexus3
-    image: sonatype/nexus3:3.20.1
+    image: sonatype/nexus3:3.37.0
     volumes:
       - "/mnt/d/nexus/data:/nexus-data"
     ports:
