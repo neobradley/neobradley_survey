@@ -10,4 +10,8 @@ services:
       - "8081:8081"
       - "8888:8888"
       - "8889:8889"
+    ulimits:
+      nofile:
+        soft: "65536"
+        hard: "65536"
     restart: always
