@@ -1,0 +1,840 @@
+credentials:
+  system:
+    domainCredentials:
+    - credentials:
+      - usernamePassword:
+          description: "GIT user for CICD "
+          id: "fb687e6f-f357-4609-a937-30901833677f"
+          password: "{AQAAABAAAAAQUqYtafqTsAibrvrWM9Ut+J9+I3qoKqwBbFTitGlbGsk=}"
+          scope: GLOBAL
+          username: "devci"
+          usernameSecret: true
+      - string:
+          id: "telegramChatId"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAAQ+bHTPo3DKQfz0fYAqZ4skM1tS+HRjE0YVB3fr0y5UIo=}"
+      - usernamePassword:
+          description: "gitlab ci"
+          id: "gitlab-ci"
+          password: "{AQAAABAAAAAQ54g36Hn4mEbwPh4FEycq2dfIWbtEtxi9md8QrfffMuM=}"
+          scope: GLOBAL
+          username: "devci"
+jenkins:
+  agentProtocols:
+  - "JNLP4-connect"
+  - "Ping"
+  authorizationStrategy:
+    roleBased:
+      roles:
+        global:
+        - assignments:
+          - "karfai"
+          - "yuyu"
+          - "dhilip"
+          - "bran"
+          - "jackson"
+          - "mervin"
+          - "ken"
+          - "eric"
+          - "ferrari"
+          - "john"
+          - "ivan"
+          name: "admin"
+          pattern: ".*"
+          permissions:
+          - "Job/Move"
+          - "Job/Build"
+          - "Credentials/Delete"
+          - "Credentials/ManageDomains"
+          - "View/Create"
+          - "Agent/Configure"
+          - "Job/Read"
+          - "Credentials/Update"
+          - "Agent/Create"
+          - "Job/Delete"
+          - "Agent/Build"
+          - "View/Configure"
+          - "Agent/Provision"
+          - "SCM/Tag"
+          - "Job/Create"
+          - "Job/Discover"
+          - "Credentials/View"
+          - "Agent/Connect"
+          - "Agent/Delete"
+          - "Run/Replay"
+          - "Agent/Disconnect"
+          - "Run/Delete"
+          - "Job/Cancel"
+          - "Overall/Read"
+          - "Run/Update"
+          - "Credentials/Create"
+          - "Overall/Administer"
+          - "View/Delete"
+          - "Job/Configure"
+          - "Job Config History/DeleteEntry"
+          - "Job/Workspace"
+          - "View/Read"
+        - assignments:
+          - "devops"
+          - "it"
+          name: "devops"
+          pattern: ".*"
+          permissions:
+          - "Overall/Read"
+          - "Job/Read"
+          - "Job/Workspace"
+          - "View/Read"
+        - assignments:
+          - "frank"
+          - "chief"
+          - "lucius"
+          - "archer"
+          name: "qq"
+          pattern: ".*"
+          permissions:
+          - "Job/Move"
+          - "Job/Build"
+          - "Job/Create"
+          - "View/Create"
+          - "Job/Discover"
+          - "Job/Read"
+          - "Job/Cancel"
+          - "Overall/Read"
+          - "Job/Delete"
+          - "View/Delete"
+          - "Job/Configure"
+          - "Job/Workspace"
+          - "View/Read"
+          - "View/Configure"
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  disabledAdministrativeMonitors:
+  - "jenkins.diagnostics.ControllerExecutorsNoAgents"
+  - "jenkins.security.QueueItemAuthenticatorMonitor"
+  globalNodeProperties:
+  - envVars:
+      env:
+      - key: "JAVA_HOME"
+        value: "/var/lib/jenkins/tools/hudson.model.JDK/jdk11/jdk-11"
+  labelAtoms:
+  - name: "built-in"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  nodeProperties:
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  - envVars:
+      env:
+      - key: "MAVEN_OPTS"
+  numExecutors: 2
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  securityRealm:
+    local:
+      allowsSignup: false
+      enableCaptcha: false
+      users:
+      - id: "archer"
+        name: "archer"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "archer@ndxo.io"
+      - id: "bran"
+        name: "bran"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "bran@ndxd.io"
+      - id: "chief"
+        name: "chief"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "chief@ndxo.io"
+      - id: "devops"
+        name: "devops"
+        properties:
+        - "apiToken"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "devops@abc.com"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+      - id: "dhilip"
+        name: "dhilip"
+        properties:
+        - "apiToken"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+        - mailer:
+            emailAddress: "dhilip@test.com"
+      - id: "eric"
+        name: "eric"
+        properties:
+        - "apiToken"
+        - mailer:
+            emailAddress: "ericchin.interphase@gmail.com"
+        - preferredProvider:
+            providerId: "default"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+      - id: "ferrari"
+        name: "ferrari"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "ferrari@abc.com"
+      - id: "frank"
+        name: "frank"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "frank@abc.com"
+      - id: "it"
+        name: "it"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "it@it.it"
+      - id: "ivan"
+        name: "ivan"
+        properties:
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "samexsam4work@gmail.com"
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+      - id: "jackson"
+        name: "jackson"
+        properties:
+        - "apiToken"
+        - mailer:
+            emailAddress: "jackson@abc.com"
+        - preferredProvider:
+            providerId: "default"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+      - id: "john"
+        name: "john"
+        properties:
+        - "apiToken"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "john@john.com"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+      - id: "karfai"
+        name: "karfai"
+        properties:
+        - "apiToken"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "karfai@karfai.com"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+      - id: "ken"
+        name: "ken"
+        properties:
+        - "apiToken"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "ken@ken.com"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+      - id: "lucius"
+        name: "lucius"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "lucius@abc.com"
+      - id: "mervin"
+        name: "mervin"
+        properties:
+        - "apiToken"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "mervin@mervin.com"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+      - id: "yuyu"
+        name: "yuyu"
+        properties:
+        - "apiToken"
+        - mailer:
+            emailAddress: "yuyu@abc.com"
+        - preferredProvider:
+            providerId: "default"
+        - favoriting:
+            autofavoriteEnabled: true
+        - "favorite"
+  slaveAgentPort: -1
+  updateCenter:
+    sites:
+    - id: "default"
+      url: "https://updates.jenkins.io/update-center.json"
+  views:
+  - list:
+      columns:
+      - "buildButton"
+      - "status"
+      - "weather"
+      - "jobName"
+      - "lastSuccess"
+      - "lastFailure"
+      - "lastDuration"
+      includeRegex: "^(yz-adm)\\S+"
+      jobNames:
+      - "qq-admin"
+      - "yz-houtai-ry-backend"
+      - "yz-houtai-ry-frontend"
+      - "yz-houtai-ry-frontend-merchant"
+      - "yz-xxl-job"
+      name: "admin-console"
+  - all:
+      name: "all"
+  - list:
+      columns:
+      - "buildButton"
+      - "status"
+      - "weather"
+      - "jobName"
+      - "lastSuccess"
+      - "lastFailure"
+      - "lastDuration"
+      - "favoriteColumn"
+      includeRegex: "^(yz-api)\\S+"
+      name: "api"
+  - list:
+      columns:
+      - "buildButton"
+      - "status"
+      - "weather"
+      - "jobName"
+      - "lastSuccess"
+      - "lastFailure"
+      - "lastDuration"
+      includeRegex: "^(yz-payment)\\S+"
+      name: "payment"
+  - list:
+      columns:
+      - "buildButton"
+      - "status"
+      - "weather"
+      - "jobName"
+      - "lastSuccess"
+      - "lastFailure"
+      - "lastDuration"
+      - "favoriteColumn"
+      jobNames:
+      - "qp-etl-service-build"
+      name: "qp-etl"
+  - list:
+      columns:
+      - "status"
+      - "weather"
+      - "jobName"
+      - "lastSuccess"
+      - "lastFailure"
+      - "lastDuration"
+      - "buildButton"
+      - "favoriteColumn"
+      jobNames:
+      - "race-nmw_game"
+      - "race-nmw_login"
+      - "race-nmw_un_game"
+      name: "race-deploy"
+  - list:
+      columns:
+      - "status"
+      - "weather"
+      - "jobName"
+      - "lastSuccess"
+      - "lastFailure"
+      - "lastDuration"
+      - "buildButton"
+      - "favoriteColumn"
+      jobNames:
+      - "race-game-common"
+      - "race-lq-nmw-dataaccess"
+      - "race-lq_nmw_un_dataaccess"
+      - "race-netkit"
+      name: "race-library"
+  - list:
+      columns:
+      - "buildButton"
+      - "status"
+      - "weather"
+      - "jobName"
+      - "lastSuccess"
+      - "lastFailure"
+      - "lastDuration"
+      jobNames:
+      - "nmw_game"
+      - "nmw_login"
+      - "nmw_un_game"
+      - "qq-all"
+      - "sms_system"
+      - "yz-all"
+      name: "yz-deploy"
+  - list:
+      columns:
+      - "buildButton"
+      - "status"
+      - "weather"
+      - "jobName"
+      - "lastSuccess"
+      - "lastFailure"
+      - "lastDuration"
+      - "favoriteColumn"
+      includeRegex: "^(yz-job)\\S+"
+      jobNames:
+      - "yz-xxl-job"
+      name: "yz-job"
+  - list:
+      columns:
+      - "status"
+      - "weather"
+      - "jobName"
+      - "lastSuccess"
+      - "lastFailure"
+      - "lastDuration"
+      - "buildButton"
+      jobNames:
+      - "yz-game-common"
+      - "yz-lq-nmw-dataaccess"
+      - "yz-lq_nmw_un_dataaccess"
+      - "yz-netkit"
+      - "yz-sms-dataaccess"
+      name: "yz-library"
+  viewsTabBar: "standard"
+globalCredentialsConfiguration:
+  configuration:
+    providerFilter: "none"
+    typeFilter: "none"
+security:
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  gitHostKeyVerificationConfiguration:
+    sshHostKeyVerificationStrategy: "knownHostsFileVerificationStrategy"
+  sSHD:
+    port: -1
+unclassified:
+  bitbucketEndpointConfiguration:
+    endpoints:
+    - bitbucketCloudEndpoint:
+        enableCache: false
+        manageHooks: false
+        repositoriesCacheDuration: 0
+        teamCacheDuration: 0
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  buildStepOperation:
+    enabled: false
+  buildTimestamp:
+    enableBuildTimestamp: true
+    pattern: "yyyy-MM-dd HH:mm:ss z"
+    timezone: "Asia/Taipei"
+  fingerprints:
+    fingerprintCleanupDisabled: false
+    storage: "file"
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "http://10.170.0.29:8901/github-webhook/"
+  gitLabConnectionConfig:
+    connections:
+    - clientBuilderId: "autodetect"
+      connectionTimeout: 10
+      ignoreCertificateErrors: false
+      readTimeout: 10
+    useAuthenticatedEndpoint: true
+  gitSCM:
+    addGitTagAction: false
+    allowSecondFetch: false
+    createAccountBasedOnEmail: false
+    disableGitToolChooser: false
+    hideCredentials: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  globalConfigFiles:
+    configs:
+    - globalMavenSettings:
+        comment: "Global settings"
+        content: "<settings>\n        <servers>\n\t\t\t<server>\n\t\t\t  <id>releases</id>\n\
+          \t\t\t  <username>admin</username>\n\t\t\t  <password>3edc$RFV</password>\n\
+          \t\t\t</server>\n\t\t\t<server>\n\t\t\t  <id>snapshots</id>\n\t\t\t  <username>admin</username>\n\
+          \t\t\t  <password>3edc$RFV</password>\n\t\t\t</server>\n        </servers>\n\
+          \        <mirrors>\n                <!--This sends everything else to /public\
+          \ -->\n                <mirror>\n                        <id>nexus</id>\n\
+          \                        <mirrorOf>*</mirrorOf>\n                      \
+          \  <url>http://dev-server.gd.com:8081/repository/maven-public/</url>\n \
+          \               </mirror>\n    </mirrors>\n    <profiles>\n        <profile>\n\
+          \            <id>nexus</id>\n            <!--Enable snapshots for the built\
+          \ in central repo to direct -->\n            <!--all requests to nexus via\
+          \ the mirror -->\n            <repositories>\n                <repository>\n\
+          \                <id>central</id>\n                <url>http://central</url>\n\
+          \                <releases><enabled>true</enabled></releases>\n        \
+          \        <snapshots><enabled>true</enabled></snapshots>\n              \
+          \  </repository>\n            </repositories>\n\n            <pluginRepositories>\n\
+          \                <pluginRepository>\n                    <id>central</id>\n\
+          \                    <url>http://central</url>\n                    <releases><enabled>true</enabled></releases>\n\
+          \                    <snapshots><enabled>true</enabled></snapshots>\n  \
+          \              </pluginRepository>\n            </pluginRepositories>\n\
+          \        </profile>\n    </profiles>\n\n    <activeProfiles>\n    <!--make\
+          \ the profile active all the time -->\n        <activeProfile>nexus</activeProfile>\n\
+          \    </activeProfiles>\n</settings>"
+        id: "ecfd4555-0363-46d7-ad38-d4a67f08cd92"
+        isReplaceAll: true
+        name: "MyGlobalSettings"
+        providerId: "org.jenkinsci.plugins.configfiles.maven.GlobalMavenSettingsConfig"
+  globalTimeOutConfiguration:
+    operations:
+    - "abortOperation"
+    overwriteable: false
+  junitTestResultStorage:
+    storage: "file"
+  locale:
+    ignoreAcceptLanguage: true
+    systemLocale: "ENGLISH"
+  location:
+    adminAddress: "還沒設定地址 <nobody@nowhere>"
+    url: "http://10.170.0.29:8901/"
+  mailer:
+    charset: "UTF-8"
+    useSsl: false
+    useTls: false
+  mavenModuleSet:
+    localRepository: "default"
+  pollSCM:
+    pollingThreadCount: 10
+  telegramBotGlobalConfiguration:
+    approvalType: ALL
+    botName: "it_dev_jenkins_bot"
+    botToken: "{AQAAABAAAAAwkOU4vMEnYAvXC39U3yExQe4uoeKYgiioJwA/YrO/dlj+xqJBMLrZ7l6LR6a/5/T2zvKgNt7HsQb7PMcl6j0k7g==}"
+    shouldLogToConsole: true
+  timestamper:
+    allPipelines: false
+    elapsedTimeFormat: "'<b>'HH:mm:ss.S'</b> '"
+    systemTimeFormat: "'<b>'HH:mm:ss'</b> '"
+tool:
+  ant:
+    installations:
+    - name: "ant-1.9.16"
+      properties:
+      - installSource:
+          installers:
+          - antFromApache:
+              id: "1.9.16"
+  git:
+    installations:
+    - home: "/usr/bin/git"
+      name: "Default"
+  gradle:
+    installations:
+    - name: "gradle-7.1"
+      properties:
+      - installSource:
+          installers:
+          - gradleInstaller:
+              id: "7.1"
+  jdk:
+    installations:
+    - name: "java8"
+    - name: "jdk11"
+      properties:
+      - installSource:
+          installers:
+          - zip:
+              subdir: "jdk-11"
+              url: "https://download.java.net/openjdk/jdk11/ri/openjdk-11+28_linux-x64_bin.tar.gz"
+  maven:
+    installations:
+    - name: "maven 3.8.6"
+      properties:
+      - installSource:
+          installers:
+          - maven:
+              id: "3.8.6"
+  mavenGlobalConfig:
+    globalSettingsProvider:
+      mvn:
+        settingsConfigId: "ecfd4555-0363-46d7-ad38-d4a67f08cd92"
+    settingsProvider: "standard"
+  nodejs:
+    installations:
+    - name: "nodejs14.20.0"
+      properties:
+      - installSource:
+          installers:
+          - nodeJSInstaller:
+              id: "14.20.0"
+              npmPackagesRefreshHours: 72
+    - name: "nodejs14.17.3"
+      properties:
+      - installSource:
+          installers:
+          - nodeJSInstaller:
+              id: "14.17.3"
+              npmPackagesRefreshHours: 72
+    - name: "nodejs8.10.0"
+      properties:
+      - installSource:
+          installers:
+          - nodeJSInstaller:
+              id: "8.10.0"
+              npmPackagesRefreshHours: 72
+    - name: "10.18.0"
+      properties:
+      - installSource:
+          installers:
+          - nodeJSInstaller:
+              id: "10.18.0"
+              npmPackagesRefreshHours: 72
